@@ -5,10 +5,12 @@ export default async function CoreGroupLayout({children}: {children: React.React
     return(
         <>
             <Navbar/>
-            <div>
+            <div className="mx-auto flex max-w-300 gap-8 px-4 pt-2">
                 <LeftNavbar/>
+                <div className="min-w-0 flex-1">
+                    {children}
+                </div>
             </div>
-            {children}
         </>
     )
 }
